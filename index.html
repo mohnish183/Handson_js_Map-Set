@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JS Map And Set</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>JS Map and Set</h1>
+      <div class="one">
+        <span>(Q1)</span>
+        <div class="box">
+          <h2>
+            "Problem: You are given a string (STR) of length N, consisting of
+            only the lower case English alphabet. Your task is to remove all the
+            duplicate occurrences of characters in the string. <br />
+            Input: abcadeecfb <br />
+            Output: abcdef"
+          </h2>
+          <p>
+            let arr = "apple"; <br /><br />
+
+            function removeDuplicates(arr) { <br />
+            return [...new Set(arr)]; <br />
+            } <br /><br />
+
+            let output=removeDuplicates(arr).join('') <br /><br />
+
+            console.log(output)
+          </p>
+        </div>
+      </div>
+      <div class="two">
+        <span>(Q2)</span>
+        <div class="box">
+          <h2>
+            "Problem: You are given a string (STR) of length N, you have to
+            print the count of all alphabet.(using maps) <br /><br />
+
+            Input: <br />
+            abcadeecfb <br /><br />
+
+            Output: <br />
+            a=2 <br />
+            b=2 <br />
+            c=2 <br />
+            d=1 <br />
+            e=2 <br />
+            f=1"
+          </h2>
+          <p>
+            let string='abcadeecfb' <br />
+            let arr = String(string).split('') <br />
+            let set1 = new Set(arr); <br />
+            let arr2=Array.from(set1) <br />
+            let x=arr2.map((e,i)=>{ <br />
+            let count =0 <br />
+            for(let j=0;j< arr.length;j++){ <br />
+            if(e==arr[j]){ <br />
+            count++; <br />
+            } <br />
+            } <br />
+            console.log(`${e} ${count}`) <br />
+            });
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
